@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
-import requests from "../requests";
-import axios from "../axios";
+import axios from "../../axios";
+import "./Home.css";
 
-const Movies = () => {
+import requests from "../../requests";
+import MovieCard from "../MovieCard/MovieCard";
+
+const Movies = (props) => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     axios
@@ -12,6 +15,7 @@ const Movies = () => {
         res.data.results.map((data) => {
           movieData.push(data);
         });
+        console.table(movieData);
         setMovies(movieData);
       })
       .catch((err) => {
@@ -20,10 +24,16 @@ const Movies = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Hello, World!</h1>
+    <div className="card-container">
       {movies.map((movie) => {
-        return <h1 key={movie.id}>{movie.title}</h1>;
+        return (
+          <div className="col md-8">
+            <MovieCard
+              title={movie.title}
+              imgSrc={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            />
+          </div>
+        );
       })}
     </div>
   );
