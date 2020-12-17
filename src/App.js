@@ -1,15 +1,20 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home/Home";
+import MovieData from "./components/MovieData/MovieData";
+import SearchBar from "./components/SearchBar/SearchBar";
 import "./App.css";
 
 const App = () => {
   return (
-    <div className="center">
-      <div>
-        <h1>Movies DB app made with React :)</h1>
-        <br />
-        <Home />
-      </div>
+    <div>
+      <SearchBar />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/details/:id" component={MovieData} />
+        </Switch>
+      </Router>
     </div>
   );
 };

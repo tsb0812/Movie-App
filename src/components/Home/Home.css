@@ -1,11 +1,14 @@
-.card-container {
+.gridContainer {
   display: grid;
-  grid-template-columns: repeat(4, 0fr);
-  gap: 15px;
+  gap: 0.5px;
+  grid-template-columns: repeat(4, 1fr);
+  display: flexbox;
+  justify-content: center;
 }
 
-@media (min-width: 900px) {
-  .cards {
-    grid-template-columns: repeat(2, 0fr);
-  }
+.mainHeading {
+  font-size: 50px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  color: aliceblue;
 }

@@ -1,10 +1,5 @@
-.center {
-  text-align: center;
-  align-self: center;
+body {
+  background-image: linear-gradient(to top, #13547a 0%, #80d0c7 100%);
   display: flex;
   justify-content: center;
-}
-
-* {
-  background-color: aqua;
 }

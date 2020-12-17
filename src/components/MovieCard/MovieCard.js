@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import "./MovieCard.css";
 
 const MovieCard = (props) => {
   return (
-    <div className="card">
-      <img className="card-img-top fixed" src={props.imgSrc} />
-    </div>
+    <Link to={`/details/${props.id}`}>
+      <img className="posterCard" src={props.imgSrc} alt={props.title} />
+    </Link>
   );
 };
 

@@ -12,9 +12,7 @@ const Movies = (props) => {
       .get(requests.popular)
       .then((res) => {
         const movieData = [];
-        res.data.results.map((data) => {
-          movieData.push(data);
-        });
+        res.data.results.map((data) => movieData.push(data));
         console.table(movieData);
         setMovies(movieData);
       })
@@ -24,17 +22,20 @@ const Movies = (props) => {
   }, []);
 
   return (
-    <div className="card-container">
-      {movies.map((movie) => {
-        return (
-          <div className="col md-8">
+    <div className="container">
+      <h1 className="mainHeading">POPULAR MOVIES</h1>
+      <div className="gridContainer">
+        {movies.map((movie) => {
+          return (
             <MovieCard
               title={movie.title}
               imgSrc={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              id={movie.id}
+              key={movie.key}
             />
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

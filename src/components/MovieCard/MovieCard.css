@@ -1,10 +1,12 @@
-.card {
-  border-width: 10px;
-  border-color: blue;
+.posterCard {
+  width: 20rem;
+  height: 25rem;
+  border-radius: 1pc;
+  transition-duration: 0.5s;
 }
 
-.fixed {
-  width: 18rem;
-  height: 20rem;
-  padding: 5px;
+.posterCard:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+  overflow: hidden;
 }

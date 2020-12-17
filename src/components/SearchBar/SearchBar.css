@@ -1,0 +1,31 @@
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.searchbar {
+  width: 70%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 1.5pc;
+  border: 0px;
+  outline: none;
+}
+
+.searchbutton {
+  outline: none;
+  height: 50px;
+  background-color: aliceblue;
+  border-color: black;
+  border-radius: 1pc;
+}
+
+.searchbutton:hover {
+  background-color: rgb(43, 43, 255);
+  color: white;
+  transition: 0.5s;
+  outline: none;
+}
