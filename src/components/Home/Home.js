@@ -22,7 +22,7 @@ const Movies = (props) => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <h1 className="mainHeading">POPULAR MOVIES</h1>
       <div className="gridContainer">
         {movies.map((movie) => {

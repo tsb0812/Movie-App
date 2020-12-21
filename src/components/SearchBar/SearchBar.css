@@ -7,7 +7,7 @@
 }
 
 .searchbar {
-  width: 70%;
+  width: 100%;
   height: 50px;
   padding: 10px;
   border-radius: 1.5pc;
@@ -15,7 +15,8 @@
   outline: none;
 }
 
-.searchbutton {
+.searchbutton,
+.homebutton {
   outline: none;
   height: 50px;
   background-color: aliceblue;
@@ -24,6 +25,13 @@
 }
 
 .searchbutton:hover {
+  background-color: rgb(43, 43, 255);
+  color: white;
+  transition: 0.5s;
+  outline: none;
+}
+
+.homebutton:hover {
   background-color: rgb(43, 43, 255);
   color: white;
   transition: 0.5s;
